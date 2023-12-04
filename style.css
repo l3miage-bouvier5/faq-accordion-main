@@ -1,0 +1,134 @@
+:root{
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-light-pink: hsl(275, 100%, 97%);
+  --clr-grayish-purple: hsl(292, 16%, 49%);
+  --clr-dark-purple: hsl(292, 42%, 14%);
+}
+
+*,*::before,*::after{
+  margin: 0;
+  padding: 0;
+  font-family: 'Work Sans', sans-serif;
+}
+
+body{
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--clr-light-pink);
+}
+
+.header-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.mobile-background {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.desktop-background {
+  display: none; /* Cache l'image de fond de bureau par défaut */
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 376px) {
+  .mobile-background {
+    display: none; /* Cache l'image de fond mobile pour les écrans plus larges */
+  }
+
+  .desktop-background {
+    display: block; /* Affiche l'image de fond de bureau pour les écrans plus larges */
+  }
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  background-color:var(--clr-white);
+  min-width: 300px;
+  max-width: 500px;
+  font-size: 15px;
+  padding: 20px;
+  height: 80%;
+  justify-content: space-between;
+  border-radius: 15px;
+  box-shadow: 0px 20px 100px var(--clr-grayish-purple);
+  margin: 0 20px;
+  gap: 30px;
+}
+
+.card-header{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 20px;
+  color: var(--clr-dark-purple);
+}
+
+.card-header img{
+  width: 20px;
+}
+
+.questions{
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px;
+  font-weight: bold;
+  color: var(--clr-dark-purple);
+  align-items: center;
+}
+
+.question{
+  display: flex;
+  justify-content: space-between;
+  gap: 45px;
+  width: 90%;
+  align-items: center;
+  color: var(--clr-dark-purple);
+}
+
+.question:hover{
+  cursor: pointer;
+}
+
+
+.btn-deploy{
+  background: none;
+  border: none;
+  width: 20px;
+}
+
+.btn-deploy:hover{
+  cursor: pointer;
+}
+
+
+.answer{
+  width: 90%;
+  color: var(--clr-grayish-purple);
+  font-weight: lighter;
+}
+
+.hidden{
+  display: none;
+}
+
+.rotate {
+  transform: rotate(45deg);
+}
+
+

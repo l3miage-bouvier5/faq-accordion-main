@@ -28,9 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
       } else {
         imageType = 'plus';
       }
-
       button.setAttribute('data-image', imageType);
-
       if (imageType === 'plus') {
         button.querySelector('img').src = './assets/images/icon-plus.svg';
       } else {
